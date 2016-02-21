@@ -13,7 +13,7 @@
                 <h2>Enter</h2>
 
                 <label for="contest1_name">What is your favourite music?</label>
-                <select name="contest1_name">
+                <select name="contest1_name" required>
                 	<option value="" selected>Select Your Answer</option>
                     <option value="Rock/Metal">Rock/Metal</option>
                     <option value="Urban/R&B ">Urban/R&B </option>
@@ -22,13 +22,13 @@
                 </select>
 
                 <label for="first_name">First name:</label>
-                <input type="text" name="first_name" />
+                <input type="text" name="first_name" required/>
 
                 <label for="last_name">Last name:</label>
                 <input type="text" name="last_name" />
 
                 <label>Country/Region</label>
-                <select name="country">
+                <select name="country" required>
                 	<option value="">Select Your Country/Region</option>
                 	<option value="GB">United Kingdom</option>
                 	<option value="AF">Afghanistan</option>
@@ -275,10 +275,10 @@
                 </select>
 
                 <label for="email">Email:</label>
-                <input type="text" name="email" />
+                <input type="email" name="email" id="email" title="eg. jane@email.com" required />
 
                 <label>Date of Birth</label>
-                <select name="birth_day">
+                <select name="birth_day" required>
                 	<option value="">DD</option>
                 	<option value="1">1</option>
                 	<option value="2">2</option>
@@ -312,7 +312,7 @@
                 	<option value="30">30</option>
                 	<option value="31">31</option>
                 </select>
-                <select name="birth_month">
+                <select name="birth_month" required>
                 	<option value="">MM</option>
                 	<option value="JAN">January</option>
                 	<option value="FEB">February</option>
@@ -327,7 +327,7 @@
                 	<option value="NOV">November</option>
                 	<option value="DEC">December</option>
                 </select>
-                <select name="birth_year">
+                <select name="birth_year" required>
                 	<option value="">YYYY</option>
                     <option value="2014">2014</option>
                 	<option value="2013">2013</option>
@@ -433,11 +433,11 @@
                 </select>
 
                 <div class="privacy-check">
-                    <input type="checkbox" name="privacy_check" />
+                    <input type="checkbox" name="privacy_check" required />
                     <label for="privacy_check">I have read and understood the Terms and Conditions.</label>
                 </div>
 
-                <input type="button" name="ch_access" value="Submit" />
+                <input type="submit" name="ch_access" value="Submit" />
 
             </form>
         </div>

@@ -70,7 +70,7 @@ label {
     display: inline-block;
 }
 
-input[type="button"] {
+input[type="submit"] {
     background-color: white;
     border: 2px solid #E22B89;
     color: #E22B89;
@@ -83,7 +83,7 @@ input[type="button"] {
     text-transform: uppercase;
 }
 
-input[type="button"]:hover {
+input[type="submit"]:hover {
     background-color: #EF0A8B;
     color: white;
 }
