@@ -2,17 +2,19 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Form Validator</title>
+        <title>Music Battle</title>
         <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div class="content-wrapper">
             <h1><span class="pink">The</span> <span class="blue">Ultimate</span></br><span class="yellow">Music</span> <span class="green">Battle</span></h1>
             <p>Let us know your favourite music genre for a chance to win.</p>
-            <form>
-                <h2>Enter</h2>
+            <h2>Enter Contest</h2>
 
-                <label for="contest1_name">What is your favourite music?</label>
+            <form>
+
+                <label for="contest1_name">What is your favourite music? *</label>
                 <select name="contest1_name" required>
                 	<option value="" selected>Select Your Answer</option>
                     <option value="Rock/Metal">Rock/Metal</option>
@@ -21,13 +23,13 @@
                     <option value="Electro/Dance">Electro/Dance</option>
                 </select>
 
-                <label for="first_name">First name:</label>
-                <input type="text" name="first_name" required/>
+                <label for="first_name">First name: *</label>
+                <input type="text" name="first_name" required />
 
                 <label for="last_name">Last name:</label>
                 <input type="text" name="last_name" />
 
-                <label>Country/Region</label>
+                <label>Country/Region: *</label>
                 <select name="country" required>
                 	<option value="">Select Your Country/Region</option>
                 	<option value="GB">United Kingdom</option>
@@ -274,11 +276,11 @@
                 	<option value="ZW">Zimbabwe</option>
                 </select>
 
-                <label for="email">Email:</label>
+                <label for="email">Email: *</label>
                 <input type="email" name="email" id="email" title="eg. jane@email.com" required />
 
-                <label>Date of Birth</label>
-                <select name="birth_day" required>
+                <label>Date of Birth: *</label>
+                <select id="day" class="dob" name="birth_day" required>
                 	<option value="">DD</option>
                 	<option value="1">1</option>
                 	<option value="2">2</option>
@@ -312,7 +314,7 @@
                 	<option value="30">30</option>
                 	<option value="31">31</option>
                 </select>
-                <select name="birth_month" required>
+                <select id="month" class="dob" name="birth_month" required>
                 	<option value="">MM</option>
                 	<option value="JAN">January</option>
                 	<option value="FEB">February</option>
@@ -327,7 +329,7 @@
                 	<option value="NOV">November</option>
                 	<option value="DEC">December</option>
                 </select>
-                <select name="birth_year" required>
+                <select id="year" class="dob" name="birth_year" required>
                 	<option value="">YYYY</option>
                     <option value="2014">2014</option>
                 	<option value="2013">2013</option>
@@ -434,12 +436,16 @@
 
                 <div class="privacy-check">
                     <input type="checkbox" name="privacy_check" required />
-                    <label for="privacy_check">I have read and understood the Terms and Conditions.</label>
+                    <label for="privacy_check">I have read and understood the Terms and Conditions. *</label>
                 </div>
 
                 <input type="submit" name="ch_access" value="Submit" />
 
             </form>
+            <div id="age-message">
+                <p>Sorry, you must be over 14 years of age to enter this contest.</p>
+                <button id="back-button">Back</button>
+            </div>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
             <script src="script.js"></script>
 

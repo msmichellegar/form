@@ -18,7 +18,16 @@ body {
     background-color: white;
     margin: 0 auto;
     padding: 50px;
-    width: 800px;
+    min-height: 700px;
+    max-width: 800px;
+}
+
+@media (max-width: 450px) {
+
+    .content-wrapper {
+        padding: 15px;
+    }
+
 }
 
 h1 {
@@ -28,6 +37,14 @@ h1 {
     margin: 0;
     text-align: center;
     text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
 }
 
 .pink {
@@ -74,7 +91,7 @@ select {
     display: inline-block;
 }
 
-input[type="submit"] {
+input[type="submit"], button {
     background-color: white;
     border: 2px solid #E22B89;
     color: #E22B89;
@@ -82,12 +99,23 @@ input[type="submit"] {
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
     font-weight: 700;
-    margin-top: 15px;
     padding: 5px 10px;
     text-transform: uppercase;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover, button:hover {
     background-color: #EF0A8B;
     color: white;
+}
+
+input[type="submit"] {
+    margin-top: 15px;
+}
+
+#age-message {
+    border: 3px solid #36A9E8;
+    display: none;
+    max-width: 500px;
+    padding: 10px;
+    text-align: center;
 }
