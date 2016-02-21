@@ -1,7 +1,12 @@
 $(document).ready(function(){
     validateEmail();
     validateAge();
-    getAge();
+
+    $("#back-button").click(function() {
+        $("#age-message").fadeOut(function() {
+            $("form").fadeIn();
+        })
+    });
 });
 
 function validateEmail() {
